@@ -1,0 +1,13 @@
+{
+  "appName":"RS3 Rotation Board",
+  "description":"Static, fully visible ability rotation cheat-sheet for Alt1.",
+  "appUrl":"./index.html",
+  "configUrl":"./appconfig.json",
+  "iconUrl":"./icon.png",
+  "defaultWidth":980,
+  "defaultHeight":420,
+  "minWidth":420,
+  "minHeight":160,
+  "maxWidth":1800,
+  "maxHeight":1000
+}
