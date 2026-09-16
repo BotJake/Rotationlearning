@@ -1,0 +1,16 @@
+{
+  "appName": "RS3 Rotation Board",
+  "description": "Static full-rotation cheat sheet with RS3 ability icons and tick/second pause markers.",
+  "appUrl": "./index.html",
+  "configUrl": "./appconfig.json",
+  "iconUrl": "./icon.png",
+  "defaultWidth": 980,
+  "defaultHeight": 420,
+  "minWidth": 420,
+  "minHeight": 160,
+  "maxWidth": 1800,
+  "maxHeight": 1000,
+  "requestHandlers": [],
+  "activators": [],
+  "permissions": ""
+}

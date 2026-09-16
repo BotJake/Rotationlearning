@@ -1,0 +1,1 @@
+Upload the CONTENTS of this folder directly to the ROOT of your GitHub repository (not inside another folder).
