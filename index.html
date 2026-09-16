@@ -1,7 +1,63 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>RS3 Rotation Board</title><link rel="stylesheet" href="style.css"></head><body><div id="app"><header><b>RS3 Rotation Board</b><span class="muted">full rotation cheat-sheet</span></header><div class="toolbar"><input id="presetName" value="EZK General"><button id="savePreset">Save</button><select id="presets"></select><button id="loadPreset">Load</button><button id="deletePreset">Delete</button><label>Icon <input id="iconSize" type="range" min="28" max="72" value="46"></label><label>Per row <input id="perRow" type="number" min="3" max="30" value="12"></label><label><input id="showNames" type="checkbox"> names</label><button id="toggleEdit">Hide editor</button></div><div id="board"></div><div id="editor"><h3>Ability library</h3><div class="pickerbar"><select id="category"></select><input id="search" placeholder="Search ability / special..."></div><div id="picker"></div><h3>Rotation</h3><div id="rotationList"></div><div class="addrow"><input id="pauseTicks" type="number" min="1" max="100" value="8"><button id="addPause">+ Ⅱ pause (ticks)</button><input id="customText" placeholder="section / note"><button id="addText">+ text</button></div><p class="muted">1 RS3 tick = 0.6 s. Example: Greater Barge stall = 8 ticks = 4.8 s. Drag rotation cards to reorder; double-click to remove. Static overlay only — no cooldown/OCR tracking.</p></div></div><script>
-// Tell Alt1 that this page is an installable app. This makes the Add app button appear in Alt1's built-in browser.
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>RS3 Rotation Board</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <div id="topbar">
+    <b>RS3 Rotation Board</b>
+    <button id="toggleMode">Overlay view</button>
+    <label>Icon <input id="iconSize" type="range" min="28" max="64" value="42"></label>
+    <label><input id="showNames" type="checkbox"> names</label>
+  </div>
+
+  <section id="liveSection">
+    <div class="sectionTitle">ACTIVE ROTATIONS</div>
+    <div id="liveBoard"></div>
+  </section>
+
+  <div id="editor">
+    <section class="panel">
+      <div class="sectionTitle">PRESETS</div>
+      <div class="presetCreate">
+        <input id="newPresetName" placeholder="New preset name">
+        <button id="newPreset">+ New</button>
+      </div>
+      <div id="presetList"></div>
+      <div class="hint">✓ Show = rodyti viršuje. Gali būti aktyvūs keli presetai vienu metu.</div>
+    </section>
+
+    <section class="panel">
+      <div class="sectionTitle">EDITING: <span id="editingName"></span></div>
+      <div id="editStrip"></div>
+      <div class="editActions">
+        <input id="pauseTicks" type="number" min="1" max="100" value="8">
+        <button id="addPause">+ Ⅱ Pause</button>
+        <button id="clearPreset">Clear</button>
+      </div>
+      <div class="hint">Ability: click bibliotekoje → prideda į galą. Viršuje drag → perstumia. Right-click → ištrina. Pause double-click → pakeičia ticks.</div>
+    </section>
+
+    <section class="panel">
+      <div class="sectionTitle">ABILITY LIBRARY</div>
+      <div class="pickerbar">
+        <select id="category"></select>
+        <input id="search" placeholder="Search ability / special...">
+      </div>
+      <div id="picker"></div>
+    </section>
+  </div>
+</div>
+
+<script>
 if (window.alt1 && typeof window.alt1.identifyAppUrl === "function") {
-  window.alt1.identifyAppUrl("https://botjake.github.io/Rotationlearning/appconfig.json");
+  window.alt1.identifyAppUrl("./appconfig.json");
 }
 </script>
-<script src="app.js"></script></body></html>
+<script src="app.js"></script>
+</body>
+</html>
