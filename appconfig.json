@@ -1,9 +1,9 @@
 {
   "appName": "RS3 Rotation Board",
   "description": "Static full-rotation cheat sheet with RS3 ability icons and tick/second pause markers.",
-  "appUrl": "./index.html",
-  "configUrl": "./appconfig.json",
-  "iconUrl": "./icon.png",
+  "appUrl": "https://botjake.github.io/Rotationlearning/index.html",
+  "configUrl": "https://botjake.github.io/Rotationlearning/appconfig.json",
+  "iconUrl": "https://botjake.github.io/Rotationlearning/icon.png",
   "defaultWidth": 980,
   "defaultHeight": 420,
   "minWidth": 420,
