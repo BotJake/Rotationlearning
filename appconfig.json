@@ -1,6 +1,6 @@
 {
   "appName": "RS3 Rotation Board",
-  "description": "Static multi-preset combat rotation cheat sheet with ability icons and pause markers.",
+  "description": "Static multi-preset combat rotation cheat sheet with ability icons, pause markers and action-bar keybind scanning.",
   "appUrl": "./index.html",
   "configUrl": "./appconfig.json",
   "iconUrl": "./icon.png",
@@ -12,5 +12,5 @@
   "maxHeight": 1200,
   "requestHandlers": [],
   "activators": [],
-  "permissions": "overlay"
+  "permissions": "pixel,overlay"
 }
